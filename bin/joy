@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+'use strict'
+
+const path = require('path');
+const program = require('commander');
+
+process.env.NODE_PATH = path.resolve(__dirname, '/../node_modules/');
+
+program
+  .usage('<command>');
+
+program
+  .command('init')
+  .description('Generate a new project')
+  .alias('i')
+  .action(()=> {
+	require('../command/init.js')();
+  });
+
+program
+  .command('add')
+  .description('Add new template information')
+  .alias('a')
+  .action(()=>{
+    require('../command/add.js')();
+  })
+
+program.parse(process.argv);
+
+if (!program.args.length) {
+  program.help();
+}
