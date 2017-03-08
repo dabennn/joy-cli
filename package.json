@@ -7,7 +7,7 @@
     "joy-cli",
     "joy"
   ],
-  "author": "dabennn",
+  "author": "https://github.com/dabennn/joy-cli",
   "license": "MIT",
   "bin": {
     "joy": "./bin/joy"
