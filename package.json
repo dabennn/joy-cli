@@ -1,17 +1,14 @@
 {
   "name": "joy-cli",
   "version": "0.1.0",
-  "description": "frontend project cli",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "scaffolding projects with joy",
   "keywords": [
     "cli",
     "joy-cli",
     "joy"
   ],
   "author": "dabennn",
-  "license": "ISC",
+  "license": "MIT",
   "bin": {
     "joy": "./bin/joy"
   },
