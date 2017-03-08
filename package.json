@@ -1,6 +1,6 @@
 {
   "name": "joy-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "scaffolding projects with joy",
   "keywords": [
     "cli",
