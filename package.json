@@ -1,16 +1,29 @@
 {
   "name": "joy-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "scaffolding projects with joy",
   "keywords": [
     "cli",
     "joy-cli",
     "joy"
   ],
-  "author": "https://github.com/dabennn/joy-cli",
+  "preferGlobal": true,
+  "author": {
+    "name": "dabennn",
+    "url": "https://github.com/dabennn/joy-cli",
+    "email": "dabennn07@gamil.com"
+  },
   "license": "MIT",
   "bin": {
     "joy": "./bin/joy"
+  },
+  "bugs": {
+    "url": "https://github.com/dabennn/joy-cli/issues",
+    "email": "dabennn07@gamil.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dabennn/joy-cli.git"
   },
   "dependencies": {
     "chalk": "^1.1.3",

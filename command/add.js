@@ -12,7 +12,7 @@ const fs = require('fs');
 const show = require('../util/show');
 
 module.exports = ()=> {
-  co(function *() {
+	co(function *() {
 		let repoName = yield prompt(chalk.blue('Repository name: '));
 		let branch = yield prompt(chalk.blue('Branch: '));
 		let desc = yield prompt(chalk.blue('Description: '));
@@ -24,7 +24,7 @@ module.exports = ()=> {
 			process.exit();
 		}
 
-		fs.writeFile(path.resolve(__dirname, '../template.json'), JSON.stringify(temp), 'utf-8', (err)=> {
+		fs.writeFile(path.resolve(__dirname, '../template.json'), JSON.stringify(temp, null, 2), 'utf-8', (err)=> {
 			if (err) {
 				console.log(chalk.red('\n Modify template with error: ' + err))
 				process.exit();
@@ -36,5 +36,5 @@ module.exports = ()=> {
 			process.exit();
 		})
 
-  });
+	});
 }

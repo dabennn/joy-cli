@@ -39,7 +39,7 @@ module.exports = ()=> {
 			packageJson.author = author;
 			packageJson.description = description;
 
-			fs.writeFile(jsonPath, JSON.stringify(packageJson), 'utf-8', (err)=> {
+			fs.writeFile(jsonPath, JSON.stringify(packageJson, null, 2), 'utf-8', (err)=> {
 				if (err) {
 					console.log(chalk.red('\n Modify package.json failed with error: '));
 					console.log(chalk.red('\n ' + err));

@@ -17,26 +17,26 @@ module.exports = ()=> {
 		let branch = yield prompt(chalk.blue('The branch you want to delete: '));
 		let sure = yield prompt(chalk.red('Are you sure?(yes or no)'));
 
-		if(sure === 'yes' || sure === 'y'){
+		if (sure === 'yes' || sure === 'y') {
 			if (temp[repo][branch]) {
 				delete temp[repo][branch];
-			}else{
+			} else {
 				console.log(chalk.red('\nNo such branch to remove..'));
 				process.exit();
 			}
-			fs.writeFile(path.resolve(__dirname, '../template.json'), JSON.stringify(temp), 'utf-8', (err)=> {
+			fs.writeFile(path.resolve(__dirname, '../template.json'), JSON.stringify(temp, null, 2), 'utf-8', (err)=> {
 				if (err) {
 					console.log('\n Fail to modify template with: ' + chalk.red(err));
 					process.exit();
 				}
 
-				console.log(chalk.green('\nBranch < '+branch+' > has been removed!'));
+				console.log(chalk.green('\nBranch < ' + branch + ' > has been removed!'));
 				console.log(chalk.gray('Lastest template list is: \n'));
 				show(temp);
 
 				process.exit();
 			})
-		}else{
+		} else {
 			process.exit();
 		}
 	})

@@ -1,1 +1,5 @@
-{"joke":{"master":"webpack,es6,postcss,stylus"}}
+{
+  "joke": {
+    "master": "webpack,es6,postcss,stylus"
+  }
+}
